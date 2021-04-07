@@ -16,6 +16,8 @@ public class Main {
         Scanner skaner = new Scanner(System.in);
         int liczbaPodana = 0;
 
+        int ile = 1;
+
         System.out.print("Podaj liczbę z przedziału od 1 - 10: ");
 
         do
@@ -30,7 +32,7 @@ public class Main {
             {
                 if (liczbaPodana == liczbaWylosowana)
                 {
-                    System.out.print("Brawo, zgadłeś!");
+                    System.out.print("Brawo, zgadłeś!. Za " + ile + " " + "próbą");
                 }
                 else if (liczbaPodana > liczbaWylosowana)
                 {
@@ -40,8 +42,11 @@ public class Main {
                 {
                     System.out.print("Podałeś za małą liczbę. Sprobuj ponownie: ");
                 }
+                ile++;
             }
         } while (liczbaPodana != liczbaWylosowana);
+
+        //System.out.println("Zgadłeś za ");
     }
 
 }
